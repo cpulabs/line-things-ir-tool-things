@@ -1,0 +1,99 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <script src=" https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="liff.js"></script>
+    <link rel="stylesheet" type="text/css" href="liff.css" />
+  </head>
+
+  <body>
+    <!-- Title -->
+    <h2>Clova IR Tool</h2>
+
+    <hr />
+    <p>
+      <img id="loading-animation" class="" src="loading.gif" height="14px" />
+      <span id="status" class="inactive">Device disconnected</span>
+    </p>
+    <hr />
+    <div id="controls" class="hidden">
+      <button id="btn-led-toggle" class="btn btn-led-toggle" onclick="receive_ir()">Receive IR</button>
+      <button id="btn-led-toggle" class="btn btn-led-toggle" onclick="transmit_ir()">Transmit IR</button>
+      <br>
+      <progress value="0" id="state_progress" max=100></progress>
+
+      <hr />
+
+      <!-- Device Info Table -->
+      <table class="device-info-table">
+        <tr>
+
+          <th class="device-info-cell device-info-key">Length</th>
+          <td class="device-info-cell device-info-val" id="rawcode_length"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">Code format</th>
+          <td class="device-info-cell device-info-val" id="code_format"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">Code</th>
+          <td class="device-info-cell device-info-val" id="code_comprex"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">Freq</th>
+          <td class="device-info-cell device-info-val" id="freq"></td>
+        </tr>
+
+        <!--
+        <tr>
+          <th class="device-info-cell device-info-key">Rawcode</th>
+
+           <td class="device-info-cell device-info-val" id="rawcode"></td>
+
+        </tr>
+      -->
+      </table>
+
+      <hr />
+        <center>
+          <div>Rawcode</div>
+          <div class="rawcode-info-val" id="rawcode"></div>
+          <button id="id_sendline" class="btn btn-led-toggle" onclick="sendLine()">Send it to LINE message</button>
+        </center>
+      <hr />
+
+      <table class="device-info-table">
+            <tr>
+              <th class="device-info-cell device-info-key">Name</th>
+              <td class="device-info-cell device-info-val" id="device-name"></td>
+            </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">ID</th>
+          <td class="device-info-cell device-info-val" id="device-id"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">PSDI</th>
+          <td class="device-info-cell device-info-val" id="device-psdi"></td>
+        </tr>
+
+
+
+      </table>
+
+      <hr />
+      <!-- Toggle LED -->
+      <p>
+
+        <div id="debug"></div>
+        <div id="debug1"></div>
+        <div id="debug2"></div>
+
+      </p>
+      <hr />
+    </div>
+  </body>
+
+</html>
