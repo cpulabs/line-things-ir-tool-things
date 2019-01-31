@@ -3,14 +3,13 @@
 
 
 // User service UUID: Change this to your generated service UUID
-const USER_SERVICE_UUID           = 'd6d88913-6e55-4e8d-87f4-af235868b377'; // CMD
+const USER_SERVICE_UUID           = 'e8adfa01-080c-4b17-8694-ce3a60d81b47'; // CMD
 const CMD_CHARACTERISTIC_UUID     = 'e98498a0-e624-4150-9c19-8ae5b6e7b044';
 const MATRIX_CHARACTERISTIC_UUID  = '2fe4e8a1-af17-4faa-b587-7d639a79b9c1';
 
 // PSDI Service UUID: Fixed value for Developer Trial
 const PSDI_SERVICE_UUID         = 'e625601e-9e55-4597-a598-76018a0d293d'; // Device ID
 const PSDI_CHARACTERISTIC_UUID  = '26e2b12b-85f0-4f3f-9fdd-91d114270e6e';
-
 
 
 let g_rawcode = [];
